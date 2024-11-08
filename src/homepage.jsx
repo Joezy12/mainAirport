@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 function HomePage(props) {
     return (
         <div className="container">
-            <form className="box">
+            <form className="box" onSubmit={props.handleSubmit}>
                 <div className="logo">
                     <img src="https://img.aviationpros.com/files/base/cygnus/cavc/image/2016/05/Modified__BWI_Logo_copy.574db71b7737e.png?auto=format%2Ccompress&w=640&width=640" />
                 </div>
@@ -61,7 +61,7 @@ function HomePage(props) {
                     </div>
                     
 
-                   <NavLink to="success"><button className="sub">Submit</button></NavLink>
+                  <button className="sub" >Submit</button>
                     
                 </section>
             </form>

