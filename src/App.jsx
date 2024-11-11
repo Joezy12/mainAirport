@@ -52,8 +52,8 @@ function App() {
   return (
     <section>
      <Routes>
-      <Route index element={<HomePage getData={getData} handleSubmit={handleSubmit}/>} />
-      <Route path='success' element={<Success />} />
+      <Route index element={<Success />} />
+      
      </Routes>
      
     </section>

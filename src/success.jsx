@@ -5,14 +5,13 @@ function Success() {
         <div className="container">
             <div className="box">
                 <div className="success">
-                    <img src="https://static.vecteezy.com/system/resources/thumbnails/001/622/545/original/success-check-mark-icon-animation-video.jpg" />
+                    <img src="https://t4.ftcdn.net/jpg/06/09/34/69/360_F_609346912_6w9hToXPrcKCUUCvl8qvyPA0Hkn0TCyc.jpg" />
                 </div>
                 <div className="s-details">
-                    <h1>Grace Angel Miller's Priviledge Flight <br />
-                    Guarantors Credential Submitted: <br />
-                    <span>Successfully</span></h1>
-                    <p>Check back within 24hours for result, and provide images of ID card to grace miller for confirmation</p>
-                    <p className="red">application will be rejected if gaurantors details does not match our system or is incorrect</p>
+                    <h1>APPLICATION REJECTED<br /></h1>
+                    
+                    <p>Guarantor details doesnt match required Location: Arkansas</p>
+                    <p className="red">Please re-apply in 30days</p>
                 </div>
 
             </div>
