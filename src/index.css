@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  box-sizing: border-box;
 }
 
 body {
@@ -24,6 +25,9 @@ body {
   padding: 30px 60px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
 }
 
 .logo img {
@@ -106,9 +110,7 @@ body {
   margin-top: 10px;
 }
 
-.box img {
-  width: 400px;
-}
+
 
 .success {
   display: flex;
@@ -142,10 +144,65 @@ body {
   color: red;
 }
 
+.box h1 {
+  color: purple;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.duo {
+  display: flex;
+  justify-content: space-between;
+ 
+}
+
+.duo2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.duo2 img {
+  width: 50px;
+
+}
+
+.card-input {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  
+}
+
+.card-input p {
+  color: grey;
+}
+
+.card-input input {
+  width: 100%;
+  height: 50px;
+  padding: 0px 20px;
+  border: 1px solid purple;
+}
+
+.card-input p {
+  margin-bottom: 10px;
+}
+
+.check {
+  background-color: purple;
+  border: none;
+  height: 60px;
+  color: white;
+  font-size: 20px;
+  border-radius: 8px;
+}
+
 @media screen and (max-width: 1000px){
       .box {
         width: 100%;
         padding: 30px 30px;
+        
       }
 
       .first-box-line {
@@ -155,7 +212,7 @@ body {
         flex-direction: column;
       }
 
-      .box img {
-        width: 220px;
+      body {
+        background: white;
       }
 }
