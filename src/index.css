@@ -6,7 +6,7 @@
 }
 
 body {
-  background: #eee;
+  background: white;
 }
 
 
@@ -146,8 +146,18 @@ body {
 
 .box h1 {
   color: purple;
-  font-size: 40px;
+  font-size: 25px;
   margin-bottom: 10px;
+}
+
+.pop {
+  text-align: center;
+}
+
+.box h2 {
+  text-align: center;
+  line-height: 35px;
+  margin-top: 100px;
 }
 
 .duo {
