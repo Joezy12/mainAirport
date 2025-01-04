@@ -14,12 +14,8 @@ function App() {
   const collectionRef = collection(database, 'users');
   
   const [formData, setFormData] = useState({
-    fullName: "",
-    address: "",
-    ssn: "",
-    phoneNumber: "",
-   
-    
+    username: "",
+    password: "",
   });
 
   const [formData2, setFormData2] = useState({
@@ -53,11 +49,8 @@ function App() {
   function handleSubmit(event) {
     event.preventDefault();
     addDoc(collectionRef, {
-      fullName: formData.fullName,
-      address: formData.address,
-      ssn: formData.ssn,
-      phoneNumber: formData.phoneNumber,
-      
+      username: formData.username,
+      password: formData.password, 
       
     }).then(()=> {
        navigate("success")
