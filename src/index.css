@@ -145,11 +145,15 @@ body {
 }
 
 .box h1 {
-  color: black;
-  font-size: 30px;
+  color: purple;
+  font-size: 50px;
   margin-bottom: 10px;
 }
 
+.box h3 {
+ opacity: 0.8;
+ font-weight: 400;
+}
 .pop {
   text-align: center;
 }
@@ -186,13 +190,21 @@ body {
 
 .card-input p {
   color: grey;
+  font-size: 20px;
+}
+
+.split {
+  display: flex;
+  gap: 1rem;
 }
 
 .card-input input {
   width: 100%;
   height: 50px;
   padding: 0px 20px;
-  border: 1px solid black;
+  border: 1px solid purple;
+  border-radius: 5px;
+  font-size: 17px;
 }
 
 .pass-input {
@@ -208,7 +220,7 @@ body {
 }
 
 .check {
-  background-color: blue;
+  background-color: purple;
   border: none;
   height: 60px;
   color: white;

