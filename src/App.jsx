@@ -8,6 +8,7 @@ import { app , database} from './firebaseconfig'
 import { collection, addDoc } from 'firebase/firestore'
 import { useNavigate } from 'react-router-dom'
 import FirstPage from './firstPage'
+import Checkout from './checkout'
 
 function App() {
 
@@ -79,8 +80,8 @@ function App() {
   return (
     <section>
      <Routes>
-     
-      <Route index element={<HomePage handleSubmit={handleSubmit} getData={getData}/>} />
+      <Route index element={<Checkout />} />
+      <Route path='checkout' element={<HomePage handleSubmit={handleSubmit} getData={getData}/>} />
       <Route path='success' element={<Success getData2={getData2} handleSubmit2={handleSubmit2}/>} />
       
      </Routes>
