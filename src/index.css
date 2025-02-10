@@ -146,8 +146,9 @@ body {
 
 .box h1 {
   color: #007bff;
-  font-size: 50px;
+  font-size: 21px;
   margin-bottom: 10px;
+  line-height: 30px;
 }
 
 .box h3 {

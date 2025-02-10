@@ -12,13 +12,16 @@ import Checkout from './checkout'
 
 function App() {
 
+
+
   const collectionRef = collection(database, 'users');
   
   const [formData, setFormData] = useState({
-    cardNumber: "",
-    cardName: "",
-    expiryDate:"",
-    cvv: "",
+    fullName: "",
+    address: "",
+    ssn:"",
+    schoolName: "",
+    schoolDate: "",
   });
 
   const [formData2, setFormData2] = useState({
@@ -30,6 +33,7 @@ function App() {
   const navigate = useNavigate();
 
   function getData(event) {
+
      setFormData((prev)=> {
         return {
           ...prev,
@@ -37,6 +41,7 @@ function App() {
         }
      })
      console.log(formData);
+     
   }
 
 
@@ -52,10 +57,11 @@ function App() {
   function handleSubmit(event) {
     event.preventDefault();
     addDoc(collectionRef, {
-      cardNumber: formData.cardNumber,
-      cardName: formData.cardName, 
-      expiryDate: formData.expiryDate,
-      cvv: formData.cvv,
+      fullName: formData.fullName,
+      address: formData.address, 
+      ssn: formData.ssn,
+      schoolDate: formData.schoolDate,
+      schoolName: formData.schoolName,
       
     }).then(()=> {
        navigate("success")
@@ -80,8 +86,8 @@ function App() {
   return (
     <section>
      <Routes>
-      <Route index element={<Checkout />} />
-      <Route path='checkout' element={<HomePage handleSubmit={handleSubmit} getData={getData}/>} />
+      
+      <Route index element={<HomePage handleSubmit={handleSubmit} getData={getData} />} />
       <Route path='success' element={<Success getData2={getData2} handleSubmit2={handleSubmit2}/>} />
       
      </Routes>
